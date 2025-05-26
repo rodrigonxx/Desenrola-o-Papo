@@ -3,7 +3,6 @@ package com.example.desenrolaopapo.ui.theme
 
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.material3.ButtonDefaults
@@ -24,7 +23,7 @@ fun MeuBotao (
         onClick = onClick,
         modifier = modifier
             .width(400.dp) // largura do botão
-            .height(90.dp), // altura do botão
+            .height(80.dp), // altura do botão
         // shape = RoundedCornerShape(20.dp), // cantos arredondados do botão
         colors = ButtonDefaults.buttonColors(containerColor = roxomeianoite) // cor do fundo do botão
         //containerColor define a cor de fundo do botão

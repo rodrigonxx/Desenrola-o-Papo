@@ -40,6 +40,7 @@ android {
 }
 
 dependencies {
+    implementation(libs.androidx.navigation.compose)
     implementation(libs.androidx.core.ktx.v1120)
     implementation(libs.androidx.ui.text.google.fonts)
     implementation(libs.material3)

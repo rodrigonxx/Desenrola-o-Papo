@@ -14,6 +14,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavHostController
 import com.example.desenrolaopapo.ui.theme.MeuBotao
 import com.example.desenrolaopapo.ui.theme.poppinsBlack
 import com.example.desenrolaopapo.ui.theme.roxomeianoite
@@ -21,7 +22,7 @@ import com.example.desenrolaopapo.ui.theme.roxomeianoite
 
 @SuppressLint("ResourceAsColor")
 @Composable
-fun Escolhaotema() {
+fun Escolhaotema(navController: NavHostController) {
 
     Column(
         modifier = Modifier.fillMaxSize(),
@@ -46,8 +47,13 @@ fun Escolhaotema() {
         Spacer( modifier = Modifier.padding(25.dp)) //espaco entre os botoes
 
         MeuBotao(
-            texto = "Primeiro Encontro",
-            onClick = { /*TODO*/ },
+            texto = "PRIMEIRO ENCONTRO",
+            // Quando eu aperto este botão:
+            // Eu digo para o GPS: "Me leve para a 'rua perguntas'!"
+            // E leve junto duas malinhas:
+            // Malinha 1 (o título): "Primeiro Encontro" (o que vai aparecer na tela)
+            // Malinha 2 (o código): "primeiroEncontro" (pra tela saber qual lista de perguntas pegar)
+            onClick = {  navController.navigate("perguntas/Primeiro Encontro/primeiroEncontro") },
 
 
         )
@@ -55,8 +61,8 @@ fun Escolhaotema() {
         Spacer( modifier = Modifier.padding(30.dp))
 
         MeuBotao(
-            texto = "Para redes sociais",
-            onClick = { /*TODO*/ },
+            texto = "REDES SOCIAIS",
+            onClick = { navController.navigate("perguntas/Redes Sociais/redesSociais") },
 
 
         )
@@ -64,16 +70,16 @@ fun Escolhaotema() {
         Spacer( modifier = Modifier.padding(30.dp))
 
         MeuBotao(
-            texto = "Fazer amizade",
-            onClick = { /*TODO*/ },
+            texto = "FAZER AMIZADE",
+            onClick = { navController.navigate("perguntas/Fazer Amizade/fazerAmizade") },
 
         )
 
         Spacer( modifier = Modifier.padding(30.dp))
 
         MeuBotao(
-            texto = "Para conhecer melhor",
-            onClick = { /*TODO*/ },
+            texto = "CONHECER MELHOR",
+            onClick = { navController.navigate("perguntas/Conhecer Melhor/conhecerMelhor") },
 
             )
         Spacer( modifier = Modifier.padding(30.dp))
