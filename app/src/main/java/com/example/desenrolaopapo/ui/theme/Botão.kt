@@ -14,26 +14,25 @@ import androidx.compose.ui.unit.sp
 
 
 @Composable
-fun MeuBotao (
-    texto: String, //texto que vai aparecer no botão
-    onClick: () -> Unit, //ação que vai acontecer quando clicar no botão
-    modifier: Modifier = Modifier //modificador para o botão
+fun MeuBotao(
+    texto: String,
+    onClick: () -> Unit,
+    modifier: Modifier = Modifier
 ) {
     Button(
         onClick = onClick,
         modifier = modifier
-            .width(400.dp) // largura do botão
-            .height(80.dp), // altura do botão
-        // shape = RoundedCornerShape(20.dp), // cantos arredondados do botão
-        colors = ButtonDefaults.buttonColors(containerColor = roxomeianoite) // cor do fundo do botão
-        //containerColor define a cor de fundo do botão
+            .width(400.dp)
+            .height(80.dp),
+        colors = ButtonDefaults.buttonColors(containerColor = roxomeianoite)
+
     ) {
 
         Text(
-            text = texto, // texto que vai aparecer no botão
-            fontSize = 20.sp, // tamanho da fonte do texto
-            color = Color.White, // cor do texto (termo utilizado quando a cor ja e padrao do android)
-            fontFamily = poppinsBlack // fonte do texto
+            text = texto,
+            fontSize = 20.sp,
+            color = Color.White,
+            fontFamily = poppinsBlack
         )
     }
 }

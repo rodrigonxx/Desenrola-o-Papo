@@ -10,11 +10,8 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            DesenrolaOPapoTheme { // Seu tema
-                // Aqui a gente "liga" o GPS e guarda ele numa variável
+            DesenrolaOPapoTheme {
                 val navController = rememberNavController()
-
-                // E aqui a gente fala para o aplicativo: "Use este mapa de navegação!"
                 Navegacao(navController = navController)
             }
         }
